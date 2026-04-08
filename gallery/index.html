@@ -54,7 +54,18 @@
   <div class="flex items-center justify-between max-w-6xl mx-auto mb-10">
     <div>
       <h1 class="text-4xl font-bold tracking-tight">AI &amp; Cloud Projects</h1>
-      <p class="dark:text-slate-400 text-slate-500 mt-1 text-lg">A collection of things I built</p>
+      <p id="subtitle" class="dark:text-slate-400 text-slate-500 mt-1 text-lg">Eine Sammlung meiner Projekte</p>
+    </div>
+
+    <!-- Language + Theme controls -->
+    <div class="flex items-center gap-4">
+
+    <!-- Language Toggle -->
+    <div class="flex items-center text-sm font-semibold dark:text-slate-400 text-slate-500">
+      <button id="btn-de" onclick="switchLang('de')"
+        class="px-2 py-0.5 rounded-l-md border dark:border-slate-600 border-slate-300 transition-colors duration-200">DE</button>
+      <button id="btn-en" onclick="switchLang('en')"
+        class="px-2 py-0.5 rounded-r-md border-t border-b border-r dark:border-slate-600 border-slate-300 transition-colors duration-200">EN</button>
     </div>
 
     <!-- Light/Dark Toggle -->
@@ -82,6 +93,8 @@
         <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/>
       </svg>
     </div>
+
+    </div><!-- end controls -->
   </div>
 
   <!-- Gallery -->
@@ -91,6 +104,23 @@
 
   <script src="content.js"></script>
   <script>
+    let currentLang = 'de';
+
+    const i18n = {
+      de: { subtitle: 'Eine Sammlung meiner Projekte', conclusion: 'Fazit' },
+      en: { subtitle: 'A collection of things I built', conclusion: 'Summary' },
+    };
+
+    function switchLang(lang) {
+      currentLang = lang;
+      document.getElementById('subtitle').textContent = i18n[lang].subtitle;
+      document.getElementById('btn-de').classList.toggle('dark:bg-slate-700', lang === 'de');
+      document.getElementById('btn-de').classList.toggle('bg-slate-200', lang === 'de');
+      document.getElementById('btn-en').classList.toggle('dark:bg-slate-700', lang === 'en');
+      document.getElementById('btn-en').classList.toggle('bg-slate-200', lang === 'en');
+      document.getElementById('gallery').innerHTML = projects.map(p => renderCard(p, lang)).join('');
+    }
+
     function toggleTheme() {
       document.documentElement.classList.toggle('dark');
     }
@@ -129,8 +159,12 @@
       chevron.classList.toggle("open");
     }
 
-    function renderCard(project) {
+    function renderCard(project, lang = 'de') {
       const accent = accentClasses[project.accentColor] ?? accentClasses.indigo;
+      const title = lang === 'en' ? (project.title_en ?? project.title) : project.title;
+      const description = lang === 'en' ? project.description_en : project.description;
+      const summary = lang === 'en' ? project.summary_en : project.summary;
+      const conclusionLabel = i18n[lang].conclusion;
 
       const footerRows = project.footer
         .map(row => {
@@ -150,17 +184,17 @@
 
           <!-- Image -->
           <div class="relative h-52 overflow-hidden dark:bg-slate-900 bg-slate-100">
-            <img src="img/${project.image}" alt="${project.title}"
+            <img src="img/${project.image}" alt="${title}"
               class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t dark:from-slate-800/80 from-white/60 to-transparent"></div>
           </div>
 
           <!-- Body -->
           <div class="p-5 flex flex-col flex-1">
-            <h2 class="text-xl font-bold dark:text-white text-slate-800 mb-2">${project.title}</h2>
-            <p class="dark:text-slate-400 text-slate-600 text-sm leading-relaxed">${project.description.replace(/\n\n/g, "<br><br>")}</p>
-            <h2 class="text-sm font-bold dark:text-white text-slate-700 mt-4 mb-1">Fazit</h2>
-            <p class="dark:text-slate-400 text-slate-600 text-sm leading-relaxed">${project.summary}</p>
+            <h2 class="text-xl font-bold dark:text-white text-slate-800 mb-2">${title}</h2>
+            <p class="dark:text-slate-400 text-slate-600 text-sm leading-relaxed">${description.replace(/\n\n/g, "<br><br>")}</p>
+            <h2 class="text-sm font-bold dark:text-white text-slate-700 mt-4 mb-1">${conclusionLabel}</h2>
+            <p class="dark:text-slate-400 text-slate-600 text-sm leading-relaxed">${summary}</p>
           </div>
 
           <!-- Collapsible Footer -->
@@ -194,7 +228,7 @@
         </div>`;
     }
 
-    document.getElementById("gallery").innerHTML = projects.map(renderCard).join("");
+    switchLang('de');
   </script>
 
 </body>

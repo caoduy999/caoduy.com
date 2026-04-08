@@ -1,0 +1,56 @@
+const projects = [
+  {
+    title: "RAG Demo",
+    image: "rag.jpg",
+    description: "Generative AI wie ChatGPT demonstrieren beeindruckende Fähigkeiten. Künstliche Intelligenz nutzt ein umfangreiches Fundament historischer Daten, doch ihr volles Potenzial entfaltet sich erst durch die Integration von aktuellem und spezialisiertem Unternehmenswissen.\n\nDa das Training und die Entwicklung solcher Modelle sehr kostenintensiv und komplex sind, stellt sich die Frage, ob Unternehmen bestehende Modelle nutzen und mit ihren eigenen aktuellen Daten erweitern können.",
+    summary: "Durch den Einsatz von Retrieval-Augmented Generation (RAG) und Prompt-Engineering können Unternehmen das volle Potenzial eines Sprachmodells ausschöpfen. Anstatt den Anwender durch herkömmliche Self-Service-Prozesse zu führen, ermöglichen intelligente Chatbots mit unternehmensspezifischem Wissen gezielte und direkte Unterstützung.",
+    link: "https://example.com/rag-demo",
+    accentColor: "indigo",
+    footer: [
+      { label: "Models",      tags: ["Titan (Embedding)", "Anthropic (LLM)"] },
+      { label: "Frontend",    tags: ["TypeScript", "Vue", "Vite", "Vuetify", "Amplify"] },
+      { label: "Backend",     tags: ["Quarkus", "Kotlin", "Pinecone"] },
+      { label: "Integration", tags: ["Bedrock Knowledgebase", "S3", "Lambda", "Route 53", "CloudFront", "API Gateway", "Cognito", "CDK"] },
+    ],
+  },
+  {
+    title: "KI Agents",
+    image: "agent.jpg",
+    description: "KI-Agents bieten Unternehmen eine effiziente und kostengünstige Möglichkeit, die Vorteile der KI zu nutzen, ohne die hohen Kosten und die Komplexität zu tragen, die mit der Entwicklung und dem Training eigener Modelle verbunden sind.\n\nIm Gegensatz zu RAG, die sich auf die Bereitstellung von Informationen und Antworten beschränken, können KI-Agents aktiv Entscheidungen treffen und Aktionen durchführen. Sie sind in der Lage, auf Anfragen zu reagieren, Prozesse anzustoßen und Aufgaben autonom zu erledigen.",
+    summary: "Mit KI-Agents können Unternehmen ihren Mitarbeitern und Kunden nicht nur Informationen bereitstellen, sondern auch direkte Unterstützung durch automatisierte Aktionen bieten. Diese Agenten sind eine skalierbare Lösung, die ohne hohe Entwicklungsaufwände und -kosten einsatzbereit ist. Dadurch erhalten Unternehmen die Möglichkeit, die Effizienz zu steigern, ohne in teure, individuelle KI-Entwicklungen investieren zu müssen.",
+    link: "https://example.com/ki-agents",
+    accentColor: "emerald",
+    footer: [
+      { label: "Models",      tags: ["Titan Embeddings G1", "Anthropic Claude 3 Haiku"] },
+      { label: "Frontend",    tags: ["WebSocket", "TypeScript", "Vue 3"] },
+      { label: "Backend",     tags: ["Quarkus", "Java 21", "Python", "Pinecone"] },
+      { label: "Integration", tags: ["Bedrock Agents", "S3", "Lambda", "Route 53", "CloudFront", "API Gateway", "Cognito", "CDK"] },
+    ],
+  },
+  {
+    title: "Spring Boot + Serverless",
+    image: "boot_n_lambda.jpg",
+    description: "AWS Lambda bietet 1 Mio Anfragen pro Monat kostenlos. Jede weitere Million kostet etwa 20 Cent. Diese kosteneffiziente Skalierbarkeit macht AWS Lambda attraktiv für Unternehmen jeder Größe.\n\nViele Unternehmen haben bereits klassische Spring Boot Web-Anwendungen. Können diese Unternehmen von den kostengünstigen Lambdas profitieren, ohne die bestehende Architektur grundlegend umzubauen?",
+    summary: "Trotz Mitigationsstrategien wie Lambda Provisioned Concurrency oder Heartbeats via EventBridge kann es bei hoher Last gelegentlich zu Kaltstarts kommen. Für Anwendungen mit geringer Auslastung, wie interne Web-Apps oder Demo-Systeme, mag dies eine sehr kostengünstige Lösung sein. Allerdings erweist sich Spring Boot in der serverless Welt als zu schwerfällig, um wirklich effizient zu sein.",
+    link: "https://example.com/spring-boot-serverless",
+    accentColor: "rose",
+    footer: [
+      { label: "Frontend",    tags: ["TypeScript", "Vue 3", "Vite", "npm", "Vuetify", "AWS Amplify"] },
+      { label: "Backend",     tags: ["Spring Boot 3", "Spring Web", "Spring JPA", "Liquibase", "Java 21"] },
+      { label: "Integration", tags: ["CloudFront", "Cognito", "API Gateway", "Lambda", "RDS", "Secrets Manager", "EventBridge", "S3", "CDK"] },
+    ],
+  },
+  {
+    title: "Quarkus Native + AWS Lambda",
+    image: "quarkus_n_lambda.jpg",
+    description: "Mit Quarkus Native und AWS Lambda verbinden sich zwei Welten: die blitzschnelle Kaltstartzeit nativer Images und die bewährte Stabilität des JVM-Ökosystems. Quarkus wurde gezielt für Container, Cloud und Serverless entwickelt – und entfaltet sein volles Potenzial im Zusammenspiel mit AWS Lambda.\n\nUnternehmen, die die Vorteile horizontaler Skalierung nutzen möchten, ohne auf den Komfort ausgereifter Java-Bibliotheken zu verzichten, finden in Quarkus Native eine elegante Lösung.",
+    summary: "Durch die native Kompilierung mit GraalVM und das optimierte Bootverhalten eignet sich Quarkus hervorragend für serverlose Architekturen. Die Kombination mit Lambda ermöglicht kosteneffiziente, hochskalierbare Anwendungen – mit der Produktivität und dem Ökosystem, das Entwickler von Java/Kotlin gewohnt sind.",
+    link: "https://example.com/quarkus-lambda",
+    accentColor: "amber",
+    footer: [
+      { label: "Frontend",    tags: ["TypeScript", "Vue 3", "Vite", "npm", "TanStack", "Vuetify", "AWS Amplify"] },
+      { label: "Backend",     tags: ["Quarkus Native", "Kotlin"] },
+      { label: "Integration", tags: ["CDK", "Lambda", "WebSocket", "DynamoDB", "API Gateway", "Cognito", "S3", "CloudFront", "Route 53"] },
+    ],
+  },
+];

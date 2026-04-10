@@ -1,12 +1,13 @@
 const projects = [
   {
-    title: "RAG Demo",
-    title_en: "RAG Demo",
+    title: "RAG",
+    title_en: "RAG",
     image: "rag.jpg",
     description: "Generative AI wie ChatGPT demonstrieren beeindruckende Fähigkeiten. Künstliche Intelligenz nutzt ein umfangreiches Fundament historischer Daten, doch ihr volles Potenzial entfaltet sich erst durch die Integration von aktuellem und spezialisiertem Unternehmenswissen.\n\nDa das Training und die Entwicklung solcher Modelle sehr kostenintensiv und komplex sind, stellt sich die Frage, ob Unternehmen bestehende Modelle nutzen und mit ihren eigenen aktuellen Daten erweitern können.",
     description_en: "Generative AI like ChatGPT demonstrates impressive capabilities. Artificial intelligence leverages an extensive foundation of historical data, yet its full potential is only realized through the integration of current and specialized enterprise knowledge.\n\nSince training and developing such models is very costly and complex, the question arises whether companies can use existing models and augment them with their own up-to-date data.",
     summary: "Durch den Einsatz von Retrieval-Augmented Generation (RAG) und Prompt-Engineering können Unternehmen das volle Potenzial eines Sprachmodells ausschöpfen. Anstatt den Anwender durch herkömmliche Self-Service-Prozesse zu führen, ermöglichen intelligente Chatbots mit unternehmensspezifischem Wissen gezielte und direkte Unterstützung.",
     summary_en: "By leveraging Retrieval-Augmented Generation (RAG) and prompt engineering, companies can unlock the full potential of a language model. Instead of guiding users through traditional self-service processes, intelligent chatbots with company-specific knowledge enable targeted and direct support.",
+    date: "09.2024",
     link: "https://rag.caoduy.com",
     accentColor: "indigo",
     footer: [
@@ -24,6 +25,7 @@ const projects = [
     description_en: "AI agents offer companies an efficient and cost-effective way to leverage the benefits of AI without bearing the high costs and complexity associated with developing and training their own models.\n\nUnlike RAG, which is limited to providing information and answers, AI agents can actively make decisions and perform actions. They are capable of responding to requests, initiating processes, and completing tasks autonomously.",
     summary: "Mit KI-Agents können Unternehmen ihren Mitarbeitern und Kunden nicht nur Informationen bereitstellen, sondern auch direkte Unterstützung durch automatisierte Aktionen bieten. Diese Agenten sind eine skalierbare Lösung, die ohne hohe Entwicklungsaufwände und -kosten einsatzbereit ist. Dadurch erhalten Unternehmen die Möglichkeit, die Effizienz zu steigern, ohne in teure, individuelle KI-Entwicklungen investieren zu müssen.",
     summary_en: "With AI agents, companies can not only provide their employees and customers with information but also offer direct support through automated actions. These agents are a scalable solution that is ready to deploy without high development effort and costs. This gives companies the opportunity to increase efficiency without investing in expensive, custom AI development.",
+    date: "09.2024",
     link: "https://agent.caoduy.com",
     accentColor: "emerald",
     footer: [
@@ -41,6 +43,7 @@ const projects = [
     description_en: "AWS Lambda offers 1 million requests per month for free. Each additional million costs about 20 cents. This cost-efficient scalability makes AWS Lambda attractive for businesses of all sizes.\n\nMany companies already have classic Spring Boot web applications. Can these companies benefit from cost-effective Lambdas without fundamentally restructuring their existing architecture?",
     summary: "Trotz Mitigationsstrategien wie Lambda Provisioned Concurrency oder Heartbeats via EventBridge kann es bei hoher Last gelegentlich zu Kaltstarts kommen. Für Anwendungen mit geringer Auslastung, wie interne Web-Apps oder Demo-Systeme, mag dies eine sehr kostengünstige Lösung sein. Allerdings erweist sich Spring Boot in der serverless Welt als zu schwerfällig, um wirklich effizient zu sein.",
     summary_en: "Despite mitigation strategies such as Lambda Provisioned Concurrency or heartbeats via EventBridge, cold starts can occasionally occur under high load. For applications with low utilization, such as internal web apps or demo systems, this may be a very cost-effective solution. However, Spring Boot proves to be too heavyweight in the serverless world to be truly efficient.",
+    date: "10.2024",
     link: "https://d3bhex5l71iifb.cloudfront.net",
     accentColor: "rose",
     footer: [
@@ -57,6 +60,7 @@ const projects = [
     description_en: "With Quarkus Native and AWS Lambda, two worlds come together: the lightning-fast cold start time of native images and the proven stability of the JVM ecosystem. Quarkus was specifically designed for containers, cloud, and serverless – and unleashes its full potential in combination with AWS Lambda.\n\nCompanies looking to leverage the benefits of horizontal scaling without sacrificing the comfort of mature Java libraries will find an elegant solution in Quarkus Native.",
     summary: "Durch die native Kompilierung mit GraalVM und das optimierte Bootverhalten eignet sich Quarkus hervorragend für serverlose Architekturen. Die Kombination mit Lambda ermöglicht kosteneffiziente, hochskalierbare Anwendungen – mit der Produktivität und dem Ökosystem, das Entwickler von Java/Kotlin gewohnt sind.",
     summary_en: "Through native compilation with GraalVM and optimized boot behavior, Quarkus is ideally suited for serverless architectures. The combination with Lambda enables cost-efficient, highly scalable applications – with the productivity and ecosystem that Java/Kotlin developers are accustomed to.",
+    date: "03.2025",
     link: "https://demo-portal.caoduy.com",
     accentColor: "amber",
     footer: [

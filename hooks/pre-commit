@@ -1,0 +1,8 @@
+#!/bin/sh
+# Auto-update lastUpdated date in content.js on every commit
+
+DATE=$(date +'%m.%Y')
+
+sed -i '' "s/lastUpdated = '[^']*';/lastUpdated = '$DATE';/" content.js
+
+git add content.js

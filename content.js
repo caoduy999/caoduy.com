@@ -20,6 +20,7 @@ $(document).ready(function () {
 angular.module('myApp', []).controller('myCtrl', function ($scope) {
     $scope.picture = 'caoduy.jpg';
     $scope.lang = lang;
+    $scope.lastUpdated = '04.2026'; // AUTO-UPDATED BY GIT HOOK ... siehe ls -lisa ./.git/hooks/pre-commit
 
     $scope.labels = lang === 'en' ? {
         aboutMeLabel: 'About me',
@@ -28,6 +29,7 @@ angular.module('myApp', []).controller('myCtrl', function ($scope) {
         mobileLabel: 'Mobile:',
         emailLabel: 'Email:',
         galleryLabel: 'Gallery:',
+        lastUpdatedLabel: 'Last updated:',
         certsHeader: 'Education / Certificates',
         techHeader: 'Technologies (selection)',
         projectsHeader: 'Projects (selection)',
@@ -41,6 +43,7 @@ angular.module('myApp', []).controller('myCtrl', function ($scope) {
         mobileLabel: 'Mobil:',
         emailLabel: 'Email:',
         galleryLabel: 'Gallerie:',
+        lastUpdatedLabel: 'Zuletzt geändert:',
         certsHeader: 'Ausbildung / Zertifikate',
         techHeader: 'Technologien (Auswahl)',
         projectsHeader: 'Projekte (Auswahl)',
